@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex; /* We're goin to set body to display flex & place the game-board inside the center of the body & give it a display of grid to mek snake & its food. */
+    justify-content: center; 
+    align-items: center;
+    background-color: black;
+}
+ 
+#game-board {
+    background-image: url("543811.jpg");
+    width: 100vmin; /* vmin (viewport minimum) meks sure that we always hev a perfect square no matter what the size of the screen is.*/
+    height: 100vmin; /* i.e. scale perfectly according to the size of our screen.*/
+    display: grid;
+    grid-template-columns: repeat(21, 1fr); /* Fr is a fractional unit which automatically calculates equal layout divisions according to the page size inside the grid*/
+    grid-template-rows: repeat(21, 1fr);
+}
+
+.snake {
+    background-color: rgb(11, 138, 11);
+    border: .25vmin solid black;
+    border-radius: 50%;
+  }
+
+.food {
+    background-color: rgb(254, 7, 164);
+    border: .25vmin solid black;
+  }
+
+  /* 
+  There are four viewport-based units in CSS:
+
+Viewport Height (vh):
+   This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height.
+Viewport Width (vw): 
+   This unit is based on the width of the viewport. A value of 1vw is equal to 1% of the viewport width.
+Viewport Minimum (vmin): 
+   This unit is based on the smaller dimension of the viewport. 
+   If the viewport height is smaller than the width, the value of 1vmin will be equal to 1% of the viewport height. 
+   Similarly, if the viewport width is smaller than the height, the value of 1vmin will be equal to 1% of the viewport width.
+Viewport Maximum (vmax):
+   This unit is based on the larger dimension of the viewport. 
+   If the viewport height is larger than the width, the value of 1vmax will be equal to 1% of viewport height.
+    Similarly, if the viewport width is larger than the height, the value of 1vmax will be equal to 1% of hte viewport width.
+*/
